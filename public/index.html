@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>バリュービジョン ゲーム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>バリュービジョン ゲーム</h1>
+  <div id="adminSetup" style="display:none;">
+    <h2>ゲーム初期設定</h2>
+    <label>名前：<input type="text" id="adminName" value="金澤" /></label><br />
+    <label>ルームID：<input type="number" id="roomId" value="1" /></label><br />
+    <label>ターン数：<input type="number" id="turns" value="2" /></label><br />
+    <label>参加者数：<input type="number" id="players" value="2" /></label><br />
+    <button id="startBtn">スタート</button>
+  </div>
+
+  <div id="playerJoin" style="display:none;">
+    <h2>プレイヤーとして参加</h2>
+    <label>名前：<input type="text" id="playerName" value="プレイヤー" /></label>
+    <button id="joinBtn">スタート</button>
+  </div>
+
+  <div id="turnInfo"></div>
+  <div id="hand" class="card-row"></div>
+<div id="othersArea" class="card-row"></div>
+<div id="trashArea" class="card-row"></div>
+<div id="drawButtons" style="display:none;">
+  <button id="drawNewBtn">カード取得</button>
+</div>
+  <button id="discardBtn" style="display:none;">カードを捨てる</button>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
